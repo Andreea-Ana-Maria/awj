@@ -4,13 +4,663 @@
   <title>My application</title>
   <link rel="stylesheet" media="all" href="css/bootstrap.min.css">
   <link rel="stylesheet" media="all" href="css/custom.css">
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <script src="/scripts/jquery.min.js"></script>
+   <script src="/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+<nav class = "navbar navbar-default">
+   
+   <div class = "container-fluid">
+     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">AWJ Base Project</a>
+    </div>
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#ang">Angajat</a></li>
+          <li><a href="#prod">Produs</a></li>
+          <li><a href="#stud">Student</a></li>
+      </ul>
+     
+      
+
+    </div><!-- /.navbar-collapse -->  
+   
+   <div>
+  
+</nav>
 
   <div class="container">
     <div ng-controller="HomeController">
       <h1>{{ helloWorld }}</h1>
     </div>
+  </div>
+
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  
+       
+       
+       <!-- Angajat -->
+<div class="container">
+    <h2><a name = "ang">Angajat</a></h2>
+ <table class = "table table-bordered">
+   <caption>Resurse</caption>
+     
+      <tr>
+         <th>ID Angajat</th>
+         <th>Nume</th>
+         <th>Prenume</th>
+		 <th>ID Departament</th>
+          <th style="width:200px;">Optiuni</th>	 
+      </tr>
+
+   
+ 
+      <tr class = "active">
+         <td>1</td>
+         <td>Tudose</td>
+         <td>Maria</td>
+		 <td>1</td>
+         <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      
+      <tr class = "success">
+         <td>2</td>
+         <td>Marcu</td>
+         <td>Alin</td>
+		 <td>2</td>
+             <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      
+      <tr class = "warning">
+         <td>3</td>
+         <td>Mihalcea</td>
+         <td>Simona</td>
+		 <td>1</td>
+              <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      
+      <tr class = "danger">
+         <td>4</td>
+         <td>Ilinca</td>
+         <td>Marius</td>
+		 <td>2</td>
+              <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+    </table>
+
+     
+    <div class="row">
+      <div class="col-md-3">
+        <h2>Edit Tabel Angajat</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">ID Angajat</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="Type ID Angajat">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Nume</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Nume Angajat">
+          </div>
+          <div class="form-group">
+            <label for="attribute3">Prenume</label>
+            <input type="text" class="form-control" id="attribute3" placeholder="Type Prenume Angajat">
+          </div>
+          <div class="form-group">
+            <label for="attribute4">ID Departament</label>
+            <input type="text" class="form-control" id="attribute4" placeholder="Type ID Departament">
+          </div>
+          <button type="submit" class="btn btn-info">Save</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Add in Tabel Angajat</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">ID Angajat</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="Type ID Angajat">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Nume</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Nume Angajat">
+          </div>
+          <div class="form-group">
+            <label for="attribute3">Prenume</label>
+            <input type="text" class="form-control" id="attribute3" placeholder="Type Prenume Angajat">
+          </div>
+          <div class="form-group">
+            <label for="attribute4">ID Departament</label>
+            <input type="text" class="form-control" id="attribute4" placeholder="Type ID Departament">
+          </div>
+          <button type="submit" class="btn btn-success">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Arata o subresursa</h1>
+      </div>
+       <div class="col-md-2">
+        <img src="http://s1.ziareromania.ro/?mmid=033d879179104563b"/>
+      </div>
+ 
+      <div class="col-md-10">
+        <h2>ID Angajat: 1</h2>
+        <p>Nume : Tudose</p>
+        <p>Prenume : Maria</p>
+        <p>ID Departament: 1</p>
+      </div>
+    </div>
+  </div>
+
+    </hr> 
+
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+
+    <!--Produs -->
+    <div class="container">
+        <h2><a name = "prod">Produs</a></h2>
+  <table class = "table table-bordered">
+   <caption>Resurse</caption>
+   
+   <thead>
+      <tr>
+         <th style="width:200px;">IDProdus</th>
+         <th style="width:200px;">Denumire</th>
+         <th style="width:200px;">Tip</th>
+		 <th style="width:200px;">Pret</th>
+          <th style="width:200px;">Optiuni</th>	 
+      </tr>
+   </thead>
+   
+   <tbody>
+      <tr class = "active">
+         <td>1</td>
+         <td>Inghetata</td>
+         <td>Dulciuri</td>
+		 <td>10</td>
+              <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      
+      <tr class = "success">
+         <td>2</td>
+         <td>Suc</td>
+         <td>Bauturi</td>
+		 <td>5</td>
+              <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      
+      <tr class = "warning">
+         <td>3</td>
+         <td>Portocala</td>
+         <td>Fructe</td>
+		 <td>5</td>
+              <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      
+      <tr class = "danger">
+         <td>4</td>
+         <td>Mar</td>
+         <td>Fructe</td>
+		 <td>2</td>
+              <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+   </tbody>
+</table>
+        
+    <div class="row">
+      <div class="col-md-3">
+        <h2>Edit Tabel Produse</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">ID Produs</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="Type ID Produs">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Denumire Produs</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Denumire Produs">
+          </div>
+            <div class="form-group">
+            <label for="attribute2">Tip Produs</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Tip Produs">
+          </div>
+        <div class="form-group">
+            <label for="attribute2">Pret</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Pret">
+          </div>
+          <button type="submit" class="btn btn-info">Save</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Adaugare Produs</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">ID Produs</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="Type ID Produs">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Denumire Produs</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Denumire Produs">
+          </div>
+            <div class="form-group">
+            <label for="attribute2">Tip Produs</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Tip Produs">
+          </div>
+        <div class="form-group">
+            <label for="attribute2">Pret</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Pret">
+          </div>
+          <button type="submit" class="btn btn-success">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Arata o subresursa</h2>
+      </div>
+    <div class="col-md-2">
+        <img src="https://www.bigmilk.pl/assets/Uploads/lody5a.png"/>
+      </div>
+      <div class="col-md-10">
+        <h1>ID Produs : 1</h1>
+        <p>Denumire : Inghetata</p>
+        <p>Tip : Dulciuri</p>
+        <p>Pret: 10</p>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+
+
+
+<!--Student-->        
+    <div class="container">
+    <h2><a name = "stud">Student</a></h2>
+<table class = "table table-bordered">
+   <caption>Resurse</caption>
+   
+   <thead>
+      <tr>
+         <th style="width:200px;">IDStudent</th>
+         <th style="width:200px;">Nume</th>
+         <th style="width:200px;">Prenume</th>
+		 <th style="width:200px;">An</th>
+         <th style="width:200px;">Optiuni</th>	
+      </tr>
+   </thead>
+   
+   <tbody>
+      <tr class = "active">
+         <td>1</td>
+         <td>Popescu</td>
+         <td>Stefan</td>
+		 <td>2</td>
+              <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      
+      <tr class = "success">
+         <td>2</td>
+         <td>Ionescu</td>
+         <td>George</td>
+		 <td>3</td>
+              <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      
+      <tr class = "warning">
+         <td>3</td>
+         <td>Gheorghe</td>
+         <td>Laura</td>
+		 <td>1</td>
+              <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      
+      <tr class = "danger">
+         <td>4</td>
+         <td>Marin</td>
+         <td>Andrei</td>
+		 <td>3</td>
+              <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Trash
+              <span class="glyphicon glyphicon-trash"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+   </tbody>  
+    
+    </table>
+
+ <div class="row">
+      <div class="col-md-3">
+        <h2>Edit Table Student</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">ID Student</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="Type ID Student">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Nume</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Nume Student ">
+          </div>
+           <div class="form-group">
+            <label for="attribute2">Prenume</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Prenume Student">
+          </div>
+           <div class="form-group">
+            <label for="attribute2">An de studiu</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type An de studiu">
+          </div>
+          <button type="submit" class="btn btn-info">Save</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Adaugare Student</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">ID Student</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="Type ID Student">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Nume</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Nume Student ">
+          </div>
+           <div class="form-group">
+            <label for="attribute2">Prenume</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type Prenume Student">
+          </div>
+           <div class="form-group">
+            <label for="attribute2">An de studiu</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Type An de studiu">
+          </div>
+          <button type="submit" class="btn btn-success">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Arata o subresura</h1>
+      </div>
+   
+    <div class="col-md-2">
+        <img src="http://kysiden.no/wp-content/uploads/2015/08/student.png"/>
+      </div>
+ 
+      <div class="col-md-10">
+        <h2>ID Student : 1</h2>
+        <p> Nume: Popescu</p>
+        <p> Prenume: Stefan</p>
+        <p> An Studiu: 2</p>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+    
+ <div class="container">
+    <footer class="footer">
+      <p class="text-muted pull-left">AWJ Base Project &copy; 2015-2016</p>
+      <p class="text-muted pull-right">Cojocaru Andreea ana-Maria, 331AB</p>
+    </footer>
   </div>
 
   <script src="js/jquery-1.11.3.min.js"></script>
