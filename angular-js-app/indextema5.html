@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html ng-app="blog">
+<head>
+  <title>My application</title>
+  <link rel="stylesheet" media="all" href="css/bootstrap.min.css">
+  <link rel="stylesheet" media="all" href="css/custom.css">
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <script src="/scripts/jquery.min.js"></script>
+   <script src="/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class = "navbar navbar-default">
+   
+   <div class = "container-fluid">
+     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">AWJ Base Project</a>
+    </div>
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#ang">Angajat</a></li>
+          <li><a href="#prod">Produs</a></li>
+          <li><a href="#stud">Student</a></li>
+      </ul>
+     
+      
+
+    </div><!-- /.navbar-collapse -->  
+   
+   <div>
+  
+</nav>
+
+  <div class="container">
+    <div ng-controller="HomeController">
+      <h1 ng-click="doStuff()">{{ helloWorld }}</h1>
+    </div>
+  </div>
+
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  
+       
+       
+       <!-- Angajat -->
+<div class="container">
+    <h2><a name = "ang">Angajat</a></h2>
+ <table class = "table table-bordered">
+   <caption>Resurse</caption>
+     
+      <tr>
+         <th ng-repeat="key in keys">{{ key }}</th>
+         <th>Nume</th>
+         <th>Prenume</th>
+		 <th>ID Departament</th>
+          <th style="width:200px;">Optiuni</th>	 
+      </tr>
+
+   
+ 
+     <tr ng-repeat="ang in angajati" data-id="{{ang.id}}">
+        <td>{{ang.id}}</td>
+		<td>{{ ang.nume }}</td>
+        <td>{{ ang.prenume }}</td>
+        <td>{{ ang.iddep }}</td>
+         <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+             <button ng-click="setUpdateAngaj(ang)" class="btn btn-info btn-xs">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </button>
+          </a>
+          <a href="">
+            <button ng-click="deleteAngaj(ang.id)" class="btn btn-danger btn-xs">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+		</button>
+          </a>
+        </td>
+      </tr>
+      
+    </table>
+
+     
+    <div class="row">
+      <div class="col-md-3">
+        <h2>Edit Tabel Angajat</h2>
+        <table>
+      <tr>
+        <td>ID</td>
+        <td><input type="text" ng-model="editAngaj.id"></td>
+      </tr>
+      <tr>
+        <td>Nume</td>
+        <td><input type="text" ng-model="editAngaj.nume"></td>
+      </tr>
+        <tr>
+        <td>Prenume</td>
+        <td><input type="text" ng-model="editAngaj.prenume"></td>
+      </tr>
+        <tr>
+        <td>ID Departament</td>
+        <td><input type="text" ng-model="editAngaj.iddep"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button class="btn btn-info btn-xs" ng-click="updateAngaj()">
+            Update
+          </button>
+        </td>
+      </tr>
+    </table>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Add in Tabel Angajat</h2>
+        <table>
+      <tr>
+        <td>ID</td>
+        <td><input type="text" class="form-control" ng-model="ang.id"/></td>
+      </tr>
+      <tr>
+        <td>Nume</td>
+        <td><input type="text" class="form-control" ng-model="ang.nume"/></td>
+      </tr>
+         <tr>
+        <td>Prenume</td>
+        <td><input type="text" class="form-control" ng-model="ang.prenume"/></td>
+      </tr>
+         <tr>
+        <td>Id Departament</td>
+        <td><input type="text" class="form-control" ng-model="ang.iddep"/></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button ng-click="addAngajat(ang)" class="btn btn-primary btn-xs">Add</button>
+        </td>
+      </tr>
+    </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Arata o subresursa</h1>
+      </div>
+       <div class="col-md-2">
+        <img src="http://s1.ziareromania.ro/?mmid=033d879179104563b"/>
+      </div>
+ 
+      <div class="col-md-10">
+        <h2>ID Angajat: 1</h2>
+        <p>Nume : Tudose</p>
+        <p>Prenume : Maria</p>
+        <p>ID Departament: 1</p>
+      </div>
+    </div>
+  </div>
+
+    </hr> 
+
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+
+    <!--Produs -->
+    <div class="container">
+        <h2><a name = "prod">Produs</a></h2>
+  <table class = "table table-bordered">
+   <caption>Resurse</caption>
+   
+   <thead>
+      <tr>
+          <th ng-repeat="key in keys">{{ key }}</th>
+         <th style="width:200px;">IDProdus</th>
+         <th style="width:200px;">Denumire</th>
+         <th style="width:200px;">Tip</th>
+		 <th style="width:200px;">Pret</th>
+          <th style="width:200px;">Optiuni</th>	 
+      </tr>
+   </thead>
+   
+   <tbody>
+       <tr ng-repeat="prod in produse" data-id="{{prod.id}}">
+        <td>{{prod.id}}</td>
+		<td>{{ prod.denumire }}</td>
+        <td>{{ ang.tip }}</td>
+        <td>{{ ang.pret }}</td>
+         <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+             <button ng-click="setUpdateProduse(prod)" class="btn btn-info btn-xs">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </button>
+          </a>
+          <a href="">
+            <button ng-click="deleteProduse(prod.id)" class="btn btn-danger btn-xs">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+		</button>
+          </a>
+        </td>
+      </tr>
+   </tbody>
+</table>
+        
+    <div class="row">
+      <div class="col-md-3">
+        <h2>Edit Tabel Produse</h2>
+        <table>
+      <tr>
+        <td>ID</td>
+        <td><input type="text" ng-model="editProduse.id"></td>
+      </tr>
+      <tr>
+        <td>Denumire</td>
+        <td><input type="text" ng-model="editProduse.denumire"></td>
+      </tr>
+        <tr>
+        <td>Tip</td>
+        <td><input type="text" ng-model="editProduse.tip"></td>
+      </tr>
+        <tr>
+        <td>Pret</td>
+        <td><input type="text" ng-model="editProduse.pret"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button class="btn btn-info btn-xs" ng-click="updateProduse()">
+            Update
+          </button>
+        </td>
+      </tr>
+    </table>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Adaugare Produs</h2>
+        <table>
+      <tr>
+        <td>ID</td>
+        <td><input type="text" class="form-control" ng-model="prod.id"/></td>
+      </tr>
+      <tr>
+        <td>Denumire</td>
+        <td><input type="text" class="form-control" ng-model="prod.denumire"/></td>
+      </tr>
+         <tr>
+        <td>Tip</td>
+        <td><input type="text" class="form-control" ng-model="prod.tip"/></td>
+      </tr>
+         <tr>
+        <td>Pret</td>
+        <td><input type="text" class="form-control" ng-model="prod.pret"/></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button ng-click="addProduse(prod)" class="btn btn-primary btn-xs">Add</button>
+        </td>
+      </tr>
+    </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Arata o subresursa</h2>
+      </div>
+    <div class="col-md-2">
+        <img src="https://www.bigmilk.pl/assets/Uploads/lody5a.png"/>
+      </div>
+      <div class="col-md-10">
+        <h1>ID Produs : 1</h1>
+        <p>Denumire : Inghetata</p>
+        <p>Tip : Dulciuri</p>
+        <p>Pret: 10</p>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+
+
+
+<!--Student-->        
+    <div class="container">
+    <h2><a name = "stud">Student</a></h2>
+<table class = "table table-bordered">
+   <caption>Resurse</caption>
+   
+   <thead>
+      <tr>
+         <th ng-repeat="key in keys">{{ key }}</th>
+         <th style="width:200px;">IDStudent</th>
+         <th style="width:200px;">Nume</th>
+         <th style="width:200px;">Prenume</th>
+		 <th style="width:200px;">An</th>
+         <th style="width:200px;">Optiuni</th>	
+      </tr>
+   </thead>
+   
+   <tbody>
+      <tr ng-repeat="stud in studenti" data-id="{{prod.id}}">
+        <td>{{stud.id}}</td>
+		<td>{{ stud.denumire }}</td>
+        <td>{{ stud.prenume }}</td>
+        <td>{{ stud.an }}</td>
+         <td>
+             <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-file"></span>
+            </span>
+          </a>
+          <a href="">
+             <button ng-click="setUpdateStudent(stud)" class="btn btn-info btn-xs">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </button>
+          </a>
+          <a href="">
+            <button ng-click="deleteStudent(stud.id)" class="btn btn-danger btn-xs">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+		</button>
+          </a>
+        </td>
+      </tr>
+   </tbody>  
+    
+    </table>
+
+ <div class="row">
+      <div class="col-md-3">
+        <h2>Edit Table Student</h2>
+       <table>
+      <tr>
+        <td>ID</td>
+        <td><input type="text" ng-model="editStudent.id"></td>
+      </tr>
+      <tr>
+        <td>Nume</td>
+        <td><input type="text" ng-model="editStudent.nume"></td>
+      </tr>
+        <tr>
+        <td>Prenume</td>
+        <td><input type="text" ng-model="editStudent.prenume"></td>
+      </tr>
+        <tr>
+        <td>An</td>
+        <td><input type="text" ng-model="editStudent.an"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button class="btn btn-info btn-xs" ng-click="updateStudent()">
+            Update
+          </button>
+        </td>
+      </tr>
+    </table>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Adaugare Student</h2>
+        <table>
+      <tr>
+        <td>ID</td>
+        <td><input type="text" class="form-control" ng-model="stud.id"/></td>
+      </tr>
+      <tr>
+        <td>Nume</td>
+        <td><input type="text" class="form-control" ng-model="stud.nume"/></td>
+      </tr>
+         <tr>
+        <td>Prenume</td>
+        <td><input type="text" class="form-control" ng-model="stud.prenume"/></td>
+      </tr>
+         <tr>
+        <td>An</td>
+        <td><input type="text" class="form-control" ng-model="stud.an"/></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button ng-click="addStudent(stud)" class="btn btn-primary btn-xs">Add</button>
+        </td>
+      </tr>
+    </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Arata o subresura</h1>
+      </div>
+   
+    <div class="col-md-2">
+        <img src="http://kysiden.no/wp-content/uploads/2015/08/student.png"/>
+      </div>
+ 
+      <div class="col-md-10">
+        <h2>ID Student : 1</h2>
+        <p> Nume: Popescu</p>
+        <p> Prenume: Stefan</p>
+        <p> An Studiu: 2</p>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+    
+ <div class="container">
+    <footer class="footer">
+      <p class="text-muted pull-left">AWJ Base Project &copy; 2015-2016</p>
+      <p class="text-muted pull-right">Cojocaru Andreea ana-Maria, 331AB</p>
+    </footer>
+  </div>
+
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
