@@ -58,12 +58,19 @@
      
       <tr>
          <th ng-repeat="key in keys">{{ key }}</th>
+          <th>ID Angajat</th>
          <th>Nume</th>
          <th>Prenume</th>
 		 <th>ID Departament</th>
           <th style="width:200px;">Optiuni</th>	 
       </tr>
-
+ 
+      <tr class = "active">
+         <td>1</td>
+         <td>Tudose</td>
+         <td>Maria</td>
+		 <td>1</td>
+         <td>
    
  
      <tr ng-repeat="ang in angajati" data-id="{{ang.id}}">
@@ -200,6 +207,10 @@
    </thead>
    
    <tbody>
+       <td>1</td>
+         <td>Inghetata</td>
+         <td>Dulciuri</td>
+		 <td>10</td>
        <tr ng-repeat="prod in produse" data-id="{{prod.id}}">
         <td>{{prod.id}}</td>
 		<td>{{ prod.denumire }}</td>
@@ -338,6 +349,13 @@
    
    <tbody>
       <tr ng-repeat="stud in studenti" data-id="{{prod.id}}">
+          
+           <tr class = "active">
+         <td>1</td>
+         <td>Popescu</td>
+         <td>Stefan</td>
+		 <td>2</td>
+               
         <td>{{stud.id}}</td>
 		<td>{{ stud.denumire }}</td>
         <td>{{ stud.prenume }}</td>
